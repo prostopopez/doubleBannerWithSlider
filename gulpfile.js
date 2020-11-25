@@ -64,8 +64,8 @@ gulp.task(`styles`, gulp.series(function () {
     return gulp.src(`sass/*.scss`)
         .pipe(sourcemaps.init())
         .pipe(sass().on(`error`, sass.logError))
-        .pipe(cssClassPrefix(classPrefix, {ignored: [/\.ui-/]}))
-        .pipe(cleanCSS({compatibility: ` 'ie8'`}))
+        .pipe(cssClassPrefix(classPrefix, { ignored: [/\.ui-/] }))
+        .pipe(cleanCSS({ compatibility: ` 'ie8'` }))
         .pipe(autoprefixer({
             browsers: [`last 2 versions`],
             cascade: false,
