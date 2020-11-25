@@ -1,2 +1,2 @@
-//slider for cards adjust
+//something global
 console.log('Hello');
