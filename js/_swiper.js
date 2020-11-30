@@ -42,8 +42,6 @@ const BtnGroup = class BtnGroup {
             this.bipolarSlideItems[i].addEventListener('touchstart', e => this.dragStart(e, this.bipolarSlideItems[i]));
             this.bipolarSlideItems[i].addEventListener('touchmove', e => this.dragAction(e));
             this.bipolarSlideItems[i].addEventListener('touchend', e => this.dragEnd(e, this.buttons));
-            // MouseWheel
-            this.bipolarSlideItems[i].addEventListener('mousewheel DOMMouseScroll', e => this.dragEnd(e, this.buttons));
         }
     }
 

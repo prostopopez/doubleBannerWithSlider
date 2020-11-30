@@ -10,7 +10,6 @@ const sourcemaps = require(`gulp-sourcemaps`);
 const concat = require(`gulp-concat`);
 const cssClassPrefix = require(`gulp-css-class-prefix`);
 const htmlClassPrefix = require(`gulp-html-prefix`);
-const svgSprite = require(`gulp-svg-sprite`);
 
 const getPublicFolderPath = (ext = ``) => gulp.dest(`./public/${ext}`);
 const classPrefix = `fnv-`;

@@ -112,11 +112,6 @@ textarea {
     outline: none;
 }
 
-ul,
-ol {
-    list-style-position: inside;
-}
-
 .cont {
     margin: 0 auto;
     width: 98%;
@@ -134,13 +129,6 @@ ol {
     @include mediaQuery(mobile) {
         width: 97%;
     }
-}
-
-body.noScroll {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    overflow-y: scroll;
 }
 
 a {
@@ -171,116 +159,10 @@ svg {
     }
 }
 
-.icon {
-    svg {
-        fill: $mainColor;
-        width: $iconSize;
-        height: $iconSize;
-
-        @include mediaQuery(mobile) {
-            width: 26px;
-            height: 26px;
-        }
-    }
-}
-
 .pageStyle {
     margin-bottom: 40px;
 
     @include mediaQuery(mobile) {
         margin-bottom: 35px;
-    }
-}
-
-.doNotUseMobile {
-    @include mediaQuery(mobile) {
-        display: none !important;
-    }
-}
-
-.useOnlyMobile {
-    display: none;
-
-    @include mediaQuery(mobile) {
-        display: block !important;
-    }
-}
-
-.modalAnimation {
-    animation: SHW .3s;
-    animation-fill-mode: both
-}
-
-@keyframes SHW {
-    from {
-        transform: scale(0);
-        opacity: 0
-    }
-    to {
-        transform: scale(1);
-        opacity: 1
-    }
-}
-
-.input,
-.textarea {
-    display: flex;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid $lightGrayColor;
-    transition: all 0.3s linear;
-
-    &::placeholder {
-        color: $mainGrayColor;
-    }
-
-    &:focus {
-        border-color: $mainColor !important;
-    }
-}
-
-.inputCounter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #FFFFFF;
-    border: 2px solid #D1D1D1;
-    box-sizing: border-box;
-    border-radius: 4px;
-    height: 56px;
-
-    input {
-        width: 50%;
-        height: 100%;
-        border: none;
-        background: #FFFFFF;
-        border-left: 2px solid #D1D1D1;
-        border-right: 2px solid #D1D1D1;
-        box-sizing: border-box;
-        text-align: center;
-        color: $tonedBlackColor;
-
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
-    }
-
-    button {
-        width: 25%;
-        align-items: center;
-        font-weight: bold;
-        font-size: 36px;
-        color: $mainColor;
-
-        @include mediaQuery(tablet) {
-            width: 36px;
-        }
-
-        @include mediaQuery(mobile) {
-            height: 46px;
-            line-height: 46px;
-        }
     }
 }
